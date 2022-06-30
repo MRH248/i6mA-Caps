@@ -132,7 +132,7 @@ class CapsuleLayer(layers.Layer):
         #  outputs.shape=[None, num_capsule, input_num_capsule, dim_capsule, 1]
         # Then sum along the input_num_capsule
         #  outputs.shape=[None, num_capsule, 1, dim_capsule, 1]
-        # Then apply squash along the dim_capsule
+        # Then apply squash along the dim_capsule 
         outputs = tf.multiply(c, inputs_hat)
         outputs = tf.reduce_sum(outputs, axis=2, keepdims=True)
         outputs = squash(outputs, axis=-2)  # [None, 10, 1, 16, 1]
