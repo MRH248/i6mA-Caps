@@ -4,7 +4,7 @@
 Created on Fri Aug 20 16:101:59 2021
 
 @author: mobeen 
-"""
+""" 
 
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID";
