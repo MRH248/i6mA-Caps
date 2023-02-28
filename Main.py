@@ -9,7 +9,7 @@ Created on Fri Aug 20 16:101:59 2021
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID";
 os.environ["CUDA_VISIBLE_DEVICES"] = "1";
-
+ 
 import numpy as np
 from Bio import SeqIO
 from sklearn.model_selection import KFold
@@ -36,7 +36,7 @@ def encode_seq(s):
     Encode = {'A':[1,0,0,0],'C':[0,1,0,0],'G':[0,0,1,0],'U':[0,0,0,1],'T':[0,0,0,1],'N':[0,0,0,0]}
     return np.array([Encode[x] for x in s])
 
-
+ 
 
 
 def listToString(s):  
